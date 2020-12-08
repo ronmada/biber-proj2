@@ -1,0 +1,53 @@
+.flex-container {
+  display: flex;
+}
+.center-text {
+  width: 100%;
+  text-align: center;
+}
+
+.navigation-container {
+  display: flex;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  width: min-content;
+}
+
+.add_margin {
+  margin-left: 10px;
+}
+.active {
+  background-color: lightskyblue;
+}
+.mat-drawer-container {
+  display: inline-block;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas: "navbar router";
+  grid-template-columns: min-content auto;
+}
+.navbar {
+  grid-area: navbar;
+}
+.router {
+  grid-area: router;
+  background-color: rgb(220, 220, 220);
+}
+.btn-info {
+  display: flex;
+  border-radius: 2em;
+  font-weight: 300;
+  text-align: center;
+}
+a {
+  color: white;
+  margin-left: 5px;
+}
+.addBtnContainer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
