@@ -2,7 +2,7 @@
   "name": "biber-proj2",
   "version": "0.0.0",
   "scripts": {
-    "gh-pages": "ng build --base-href ./ --prod && npx ngh --dir=dist/",
+    "gh-pages": "ng deploy --base-href=./",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
