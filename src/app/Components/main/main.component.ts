@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
   public isDescpHidden: boolean;
-  public addNav = { icon_name: 'add', descp: 'add new' };
+  public addNav = { icon_name: 'add', descp: 'Add New' };
   public navigations = [
-    // { icon_name: 'add', descp: 'add new', path: 'addnew', pathMatch: 'full' },
     {
       icon_name: 'home',
       descp: 'Overview',
@@ -44,13 +43,14 @@ export class MainComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.isDescpHidden = false;
+    this.isDescpHidden = true;
   }
-  toggleNav() {
+  toggleNav(): void {
     this.isDescpHidden = !this.isDescpHidden;
     console.log('bigNavBool :  ', this.isDescpHidden);
   }
-  addNewItem() {
+  addNewItem(): void {
     console.log('add new item');
+    alert('clicked on Add New')
   }
 }

@@ -3,6 +3,7 @@
     <button class="sidenav-menu" mat-icon-button (click)="toggleNav()">
       <mat-icon>menu</mat-icon>
     </button>
+    <mat-icon>account_balance</mat-icon>
     <span>Qwan</span>
     <div class="center-text">
       <a>Office Depot</a>
@@ -16,11 +17,11 @@
     <mat-sidenav #sidenav mode="side" opened> </mat-sidenav>
     <mat-sidenav-content>
       <div class="addBtnContainer">
-      <button type="button" class="btn btn-info" (click)="addNewItem()">
-        <mat-icon>{{ addNav.icon_name }}</mat-icon>
-        <a   *ngIf="isDescpHidden"> {{ addNav.descp }}</a>
-      </button>
-    </div>
+        <button type="button" class="btn btn-info" (click)="addNewItem()">
+          <mat-icon>{{ addNav.icon_name }}</mat-icon>
+          <a *ngIf="!isDescpHidden"> {{ addNav.descp }}</a>
+        </button>
+      </div>
       <div
         class="navigation-container"
         *ngFor="let nav of navigations"
@@ -28,7 +29,7 @@
         routerLinkActive="active"
       >
         <mat-icon>{{ nav.icon_name }} </mat-icon>
-        <nav class="add_margin" *ngIf="isDescpHidden">{{ nav.descp }}</nav>
+        <nav class="add_margin" *ngIf="!isDescpHidden">{{ nav.descp }}</nav>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
