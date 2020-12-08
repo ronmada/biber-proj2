@@ -47,10 +47,8 @@ export class MainComponent implements OnInit {
   }
   toggleNav(): void {
     this.isDescpHidden = !this.isDescpHidden;
-    console.log('bigNavBool :  ', this.isDescpHidden);
   }
   addNewItem(): void {
-    console.log('add new item');
-    alert('clicked on Add New')
+    alert('clicked on Add New');
   }
 }

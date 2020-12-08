@@ -7,11 +7,17 @@ import { CouponsComponent } from './Components/coupons/coupons.component';
 import { ApiImportsComponent } from './Components/api-imports/api-imports.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'overview',
+  },
   { path: 'overview', pathMatch: 'full', component: OverviewComponent },
   { path: 'masterData', pathMatch: 'full', component: MasterDataComponent },
   { path: 'campaign', pathMatch: 'full', component: CampaignsComponent },
   { path: 'coupons', pathMatch: 'full', component: CouponsComponent },
   { path: 'imports', pathMatch: 'full', component: ApiImportsComponent },
+  { path: '**', redirectTo: 'overview' },
 ];
 
 @NgModule({
